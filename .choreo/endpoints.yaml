@@ -1,0 +1,8 @@
+version: 0.1
+
+endpoints:
+  - name: component1
+    port: 3002
+    type: REST
+    networkVisibility: Public
+    context: .
