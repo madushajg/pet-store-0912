@@ -1,0 +1,29 @@
+openapi: 3.0.3
+info:
+  title: Sample API
+  description: >-
+    This is a sample API specification for a simple hello world service
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+externalDocs:
+  description: Choreo
+  url: https://choreo.dev
+servers:
+  - url: http://localhost:8080
+paths:
+  /:
+    summary: get greeting
+    get:
+      summary: get greeting
+      operationId: greeting
+      tags:
+        - hw
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: string
