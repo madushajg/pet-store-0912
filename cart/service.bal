@@ -6,7 +6,7 @@ import ballerina/http;
 	label: "cart",
 	id: "cart-5838250d-9d75-496c-8427-adf0e757f640"
 }
-service / on new http:Listener(9090) {
+service / on new http:Listener(9091) {
 
     # A resource for generating greetings
     # + name - the input string name
