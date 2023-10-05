@@ -11,7 +11,7 @@ service / on new http:Listener(9091) {
 
     # A resource for generating greetings
     # + return - string name with hello message or error
-    resource function get getCartItem() returns string|error {
+    resource function get getCartItem() returns string {
         log:printInfo("cart service invoked");
         return "Hello";
     }

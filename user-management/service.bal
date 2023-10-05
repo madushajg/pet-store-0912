@@ -14,6 +14,11 @@ service / on new http:Listener(9092) {
     # + return - string name with hello message or error
     resource function get getUser(string name) returns string|error {
         log:printInfo("Get user called with name: " + name);
+
+        http:Client cartClient = check new ("http://cart-3478516806:9091");
+        string cartResponse = check cartClient->get("/getCartItem");
+
+        log:printInfo("Cart response: " + cartResponse);
         if name is "" {
             return error("name should not be empty!");
         }
