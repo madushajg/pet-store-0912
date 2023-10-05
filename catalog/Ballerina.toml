@@ -2,7 +2,7 @@
 org = "Madushagunasekara"
 name = "catalog"
 version = "1.0.0"
-distribution = "2201.8.0-20230908-135700-74a59dff"
+distribution = "2201.7.2"
 
 [build-options]
 observabilityIncluded = true
