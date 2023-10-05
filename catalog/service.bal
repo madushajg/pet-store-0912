@@ -16,7 +16,7 @@ service / on new http:Listener(9090) {
     http:Client orderManagementClient;
 
     function init() returns error? {
-        self.orderManagementClient = check new ("https://2f4ebd99-ec9e-4508-96d9-6df9d51db292-dev-internal.e1-us-east-azure.internal.preview-dv.choreoapis.dev/caex/order-management/orders-1fd/v1.0");
+        self.orderManagementClient = check new ("http://order-management-2330531075:9093");
         // self.orderManagementClient = check new ("http://localhost:9093");
     }
 
