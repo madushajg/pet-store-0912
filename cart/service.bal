@@ -12,7 +12,7 @@ service / on new http:Listener(9091) {
     http:Client salesClient;
 
     function init() returns error? {
-        self.salesClient = check new ("http://salesservice-3984432628:9081");
+        self.salesClient = check new ("https://2f4ebd99-ec9e-4508-96d9-6df9d51db292-dev.e1-us-east-azure.preview-dv.choreoapis.dev/igcs/salesservice/sales-90c/v1.0");
     }
 
 
