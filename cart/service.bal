@@ -9,10 +9,18 @@ import ballerina/log;
 }
 service / on new http:Listener(9091) {
 
+    http:Client salesClient;
+
+    function init() returns error? {
+        self.salesClient = check new ("http://salesservice-3984432628:9081");
+    }
+
+
     # A resource for generating greetings
     # + return - string name with hello message or error
     resource function get getCartItem() returns string {
         log:printInfo("cart service invoked");
-        return "Hello";
+        string sales = check self.salesClient->get("/salesInRegionA");
+        return string `sales: ${sales}`;
     }
 }
