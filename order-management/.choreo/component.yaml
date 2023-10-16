@@ -1,0 +1,9 @@
+version: 0.1
+
+type: service
+endpoints:
+  - name: Orders
+    port: 9093
+    type: REST
+    networkVisibility: Project
+    context: /

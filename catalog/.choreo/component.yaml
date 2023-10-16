@@ -1,0 +1,11 @@
+version: 0.1
+
+type: service
+endpoints:
+  - name: Catalog
+    port: 9090
+    type: REST
+    networkVisibility: Public
+    context: /
+connections:
+  - id: choreo://Pet Store/order-management

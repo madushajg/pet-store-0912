@@ -1,0 +1,11 @@
+version: 0.1
+
+type: service
+endpoints:
+  - name: UserManagement
+    port: 9092
+    type: REST
+    networkVisibility: Public
+    context: /
+connections:
+  - id: choreo://Pet Store/cart/v1/Cart
