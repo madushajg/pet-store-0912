@@ -14,7 +14,7 @@ service / on new http:Listener(9091) {
 
     function init() returns error? {
         self.salesClient = check new ("https://2f4ebd99-ec9e-4508-96d9-6df9d51db292-dev.e1-us-east-azure.preview-dv.choreoapis.dev/igcs/salesservice/sales-90c/v1.0");
-        self.inventoryClient = check new ("https://2f4ebd99-ec9e-4508-96d9-6df9d51db292-dev-internal.e1-us-east-azure.internal.preview-dv.choreoapis.dev/lpar/inventory/inventory-20c/v1.0");
+        self.inventoryClient = check new ("https://2f4ebd99-ec9e-4508-96d9-6df9d51db292-prod-internal.e1-us-east-azure.internal.preview-dv.choreoapis.dev/lpar/inventory/inventory-20c/v1.0");
 
     }
 
